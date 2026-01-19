@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dserrano <dserrano@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/17 18:50:54 by dserrano          #+#    #+#             */
-/*   Updated: 2026/01/19 16:05:46 by dserrano         ###   ########.fr       */
+/*   Created: 2026/01/19 19:18:03 by dserrano          #+#    #+#             */
+/*   Updated: 2026/01/19 19:34:58 by dserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
+	const unsigned char	*temp_s1;
+	const unsigned char	*temp_s2;
 	size_t			i;
-	unsigned char	chr;
 
+	if (!n)
+		return (0);
+	temp_s1 = (unsigned char *)s1;
+	temp_s2 = (unsigned char *)s2;
 	i = 0;
-	chr = (unsigned char)c;
-	while (s[i] != chr && s[i] != '\0')
+	while (i < n)
+	{
+		if (temp_s1[i] == temp_s2[i])
+			return (temp_s1[i] - temp_s2[i]);
 		i++;
-	if (s[i] == chr)
-		return ((char *)(s + i));
-	return (NULL);
+	}
+	return (0);
 }

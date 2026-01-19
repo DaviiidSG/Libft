@@ -6,7 +6,7 @@
 /*   By: dserrano <dserrano@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 12:57:28 by dserrano          #+#    #+#             */
-/*   Updated: 2026/01/19 13:17:28 by dserrano         ###   ########.fr       */
+/*   Updated: 2026/01/19 18:12:11 by dserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (temp_s[i] == temp_c)
-			return (s + i);
+			return ((void *)(temp_s + i));
+		i++;
 	}
 	return (NULL);
 }
