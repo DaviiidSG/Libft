@@ -3,7 +3,7 @@ NAME = libft.a
 
 # Compiler and flags
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 # Source and object files
 SRCS = $(wildcard *.c)
