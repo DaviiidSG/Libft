@@ -6,7 +6,7 @@
 /*   By: dserrano <dserrano@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 16:32:11 by dserrano          #+#    #+#             */
-/*   Updated: 2026/01/28 16:42:54 by dserrano         ###   ########.fr       */
+/*   Updated: 2026/01/28 20:46:47 by dserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ char	*ft_itoa(int n)
 	sign = 0;
 	if (n < 0)
 		sign = 1;
+
 
 }
