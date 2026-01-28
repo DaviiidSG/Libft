@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dserrano <dserrano@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/13 21:50:47 by dserrano          #+#    #+#             */
-/*   Updated: 2026/01/26 20:05:24 by dserrano         ###   ########.fr       */
+/*   Created: 2026/01/28 16:32:11 by dserrano          #+#    #+#             */
+/*   Updated: 2026/01/28 16:42:54 by dserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+char	*ft_itoa(int n)
 {
-	return (c >= 32 && c <= 126);
+	unsigned int	sign;
+	char			*str;
+
+	sign = 0;
+	if (n < 0)
+		sign = 1;
+
 }

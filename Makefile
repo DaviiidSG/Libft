@@ -5,15 +5,17 @@ NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g
 
-# Source and object files
+# Source and object files and dir
 SRCS = $(wildcard *.c)
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:%.c=%.o)
+#OBJ_DIR = objs
+#OBJS = $(SRCS:%.c=$(OBJ_DIR)/%.o)
 
 # Delete files
 RM = rm -f
 
 # Indicates that the following rules are not actual files
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 
 # Default rule to compile
 all: $(NAME)
@@ -25,8 +27,12 @@ $(NAME): $(OBJS)
 # Create .o files
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -o $@ -c $<
+# Create .o files inside dir
+#$(OBJ_DIR)/%.o: %.c libft.h
+#	mkdir -p $(OBJ_DIR)
+#	$(CC) $(CFLAGS) -o $@ -c $<
 
-# Delete .o files only
+# Delete dir objs
 clean:
 	$(RM) $(OBJS)
 
@@ -36,3 +42,6 @@ fclean: clean
 
 # Restart
 re: fclean all
+
+# BORRAR
+bonus: all

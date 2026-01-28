@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dserrano <dserrano@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/15 16:29:15 by dserrano          #+#    #+#             */
-/*   Updated: 2026/01/22 16:02:54 by dserrano         ###   ########.fr       */
+/*   Created: 2026/01/21 18:07:10 by dserrano          #+#    #+#             */
+/*   Updated: 2026/01/25 15:49:26 by dserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char		*temp_dest;
-	const unsigned char	*temp_src;
-	size_t				i;
+	char	*dst;
+	size_t	s_len;
+	size_t	i;
 
-	if (!dest && !src)
+	s_len = ft_strlen(s);
+	if (!s_len || start > s_len)
+		return (ft_strdup(""));
+	if (start + len > s_len)
+		dst = malloc(((s_len - start) + 1) * sizeof(*dst));
+	else
+		dst = malloc((len + 1) * sizeof(*dst));
+	if (!dst)
 		return (NULL);
-	temp_dest = (unsigned char *)dest;
-	temp_src = (const unsigned char *)src;
 	i = 0;
-	while (i < n)
+	while (i < len && s[start + i])
 	{
-		temp_dest[i] = temp_src[i];
+		dst[i] = s[start + i];
 		i++;
 	}
-	return (dest);
+	dst[i] = '\0';
+	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: dserrano <dserrano@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 18:50:54 by dserrano          #+#    #+#             */
-/*   Updated: 2026/01/19 16:05:46 by dserrano         ###   ########.fr       */
+/*   Updated: 2026/01/23 20:30:57 by dserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t			i;
-	unsigned char	chr;
+	size_t	len;
 
-	i = 0;
-	chr = (unsigned char)c;
-	while (s[i] != chr && s[i] != '\0')
-		i++;
-	if (s[i] == chr)
-		return ((char *)(s + i));
-	return (NULL);
+	len = ft_strlen(s);
+	return ((char *)ft_memchr(s, c, len + 1));
 }
