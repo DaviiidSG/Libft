@@ -1,3 +1,4 @@
 *.o
 *.out
 PRUEBA.c
+*.a
