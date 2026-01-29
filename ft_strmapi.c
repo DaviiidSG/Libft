@@ -6,7 +6,7 @@
 /*   By: dserrano <dserrano@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 14:25:56 by dserrano          #+#    #+#             */
-/*   Updated: 2026/01/29 15:08:04 by dserrano         ###   ########.fr       */
+/*   Updated: 2026/01/29 16:50:32 by dserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	s_len;
 	unsigned int	i;
 
-	if (!s)
+	if (!s ||!f)
 		return (NULL);
 	s_len = ft_strlen(s);
 	new_s = malloc((s_len + 1) * sizeof(*new_s));

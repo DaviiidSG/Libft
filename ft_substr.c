@@ -6,7 +6,7 @@
 /*   By: dserrano <dserrano@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 18:07:10 by dserrano          #+#    #+#             */
-/*   Updated: 2026/01/25 15:49:26 by dserrano         ###   ########.fr       */
+/*   Updated: 2026/01/29 17:05:10 by dserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	s_len = ft_strlen(s);
 	if (!s_len || start > s_len)
 		return (ft_strdup(""));
