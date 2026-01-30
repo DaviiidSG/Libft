@@ -6,7 +6,7 @@
 /*   By: dserrano <dserrano@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 14:25:56 by dserrano          #+#    #+#             */
-/*   Updated: 2026/01/29 16:50:32 by dserrano         ###   ########.fr       */
+/*   Updated: 2026/01/29 18:54:44 by dserrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*new_s;
-	size_t	s_len;
+	char			*new_s;
+	size_t			s_len;
 	unsigned int	i;
 
 	if (!s ||!f)
