@@ -8,14 +8,12 @@ CFLAGS = -Wall -Wextra -Werror -g
 # Source and object files and dir
 SRCS = $(wildcard *.c)
 OBJS = $(SRCS:%.c=%.o)
-#OBJ_DIR = objs
-#OBJS = $(SRCS:%.c=$(OBJ_DIR)/%.o)
 
 # Delete files
 RM = rm -f
 
 # Indicates that the following rules are not actual files
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
 
 # Default rule to compile
 all: $(NAME)
@@ -27,10 +25,6 @@ $(NAME): $(OBJS)
 # Create .o files
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -o $@ -c $<
-# Create .o files inside dir
-#$(OBJ_DIR)/%.o: %.c libft.h
-#	mkdir -p $(OBJ_DIR)
-#	$(CC) $(CFLAGS) -o $@ -c $<
 
 # Delete dir objs
 clean:
@@ -40,8 +34,5 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-# Restart
+# Delete and compile everything again
 re: fclean all
-
-# BORRAR
-bonus: all
