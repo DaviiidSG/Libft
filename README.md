@@ -1,6 +1,6 @@
 *Este proyecto ha sido creado como parte del currículo de 42 por dserrano*
 
-# Descripcion
+# Descripción
 
 **Libft** es el primer proyecto del cursus, su objetivo principal es recrear distintas funciones de la librería estándar de C (libc) y algunas funciones adicionales que nos serán de gran utilidad a lo largo del cursus.
 
