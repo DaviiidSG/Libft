@@ -3,7 +3,7 @@ NAME = libft.a
 
 # Compiler and flags
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 
 # Source and object files and dir
 SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \

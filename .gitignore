@@ -1,4 +1,3 @@
 *.o
-*.out
-PRUEBA.c
 *.a
+*.out
