@@ -17,7 +17,7 @@ Este proyecto incluye un **Makefile** que gestiona la compilación de forma auto
 - ``make fclean``: Elimina los archivos objeto y la librería estática ``libft.a``
 - ``make re``: Compila todo desde cero usando ``fclean`` y luego ``make``.
 
-## Instalacion
+## Instalación
 
 Para usar **libft** en otros proyectos de C, primero hay que copiar la carpeta de la librería y añadir el siguiente *include* en el programa: ``#include "libft.h"``.\
 Para compilar el proyecto hay que enlazarlo primero con la librería utilizando las siguientes flags:
@@ -42,7 +42,7 @@ En este proyecto utilicé la IA para entender mejor el funcionamiento de algunas
 
 Esta librería se divide en 3 bloques:
 
-## 1. Funciones estándar
+## 1. Funciones estándar de la libc
 
 | Función         | Descripción                                                                                                                     |
 | :-------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
@@ -69,6 +69,11 @@ Esta librería se divide en 3 bloques:
 | ft_atoi         | Transforma un número en formato de string a formato entero.                                                                     |
 | ft_calloc       | Reserva una cantidad arbitraria de bytes en memoria con un valor inicial de 0.                                                  |
 | ft_strdup       | Duplica el string pasado como parámetro.                                                                                        |
+
+## 2. Funciones adicionales
+
+| Función         | Descripción                                                                                                                     |
+| :-------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
 | ft_substr       | Copia a desde el enésimo carácter de un string hasta una distancia dada.                                                        |
 | ft_strjoin      | Reserva memoria suficiente y concatena dos strings.                                                                             |
 | ft_strtrim      | Elimina los carácteres coincidentes con los pasados como parámetros del principio y final de la cadena.                         |
@@ -80,6 +85,11 @@ Esta librería se divide en 3 bloques:
 | ft_putstr_fd    | Envía un string al descriptor de archivo especificado.                                                                          |
 | ft_putendl_fd   | Envía un string seguido de un salto de línea al descriptor de archivo especificado.                                             |
 | ft_putnbr_fd    | Envía un número entero al descriptor de archivo especificado.                                                                   |
+
+## 3. Funciones para manejar listas enlazadas
+
+| Función         | Descripción                                                                                                                     |
+| :-------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
 | ft_lstnew       | Reserva memoria y crea un nuevo nodo de una lista.                                                                              |
 | ft_lstadd_front | Añade un nuevo nodo al principio de una lista.                                                                                  |
 | ft_lstsize      | Devuelve la cantidad de nodos que hay en una lista.                                                                             |
